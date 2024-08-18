@@ -1,6 +1,4 @@
-Here's your content with some added emojis to make it more visually engaging:
 
-```markdown
 ## 🔍 Monitoring and Observability Setup
 
 This application is equipped with a comprehensive monitoring and observability stack, utilizing OpenTelemetry for tracing, Prometheus for metrics collection, Grafana for visualization, and Loki for log aggregation.
@@ -63,6 +61,3 @@ This application is equipped with a comprehensive monitoring and observability s
 - **🌐 Environment Variables**: The OpenTelemetry setup can be further customized using environment variables to specify custom endpoints, headers, or other configuration parameters.
 
 This setup provides a powerful observability framework, allowing you to monitor, trace, and debug your application effectively.
-```
-
-The emojis add a visual cue and make the `README.md` more engaging and easier to navigate.
