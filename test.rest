@@ -1,0 +1,39 @@
+### Add a new item
+POST http://localhost:3000/items
+Content-Type: application/json
+
+{
+  "id": "12",
+  "name": "Item One"
+}
+
+###
+
+### Retrieve the item by ID
+GET http://localhost:3000/items/1
+
+###
+
+### Update the item
+PUT http://localhost:3000/items/1
+Content-Type: application/json
+
+{
+  "name": "Updated Item One"
+}
+
+###
+
+### Retrieve the updated item
+GET http://localhost:3000/items/1
+
+###
+
+### Delete the item
+DELETE http://localhost:3000/items/1
+
+###
+
+### Try retrieving the deleted item (should return 404)
+GET http://localhost:3000/items/1
+
