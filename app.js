@@ -99,7 +99,7 @@ app.post('/items', async (req, res) => {
   }
 
   try {
-    await client.set(id, name);
+    await redisClient.set(id, name);
     res.status(201).send('Item created successfully');
   } catch (err) {
     res.status(500).send('Error creating item');

@@ -9,6 +9,7 @@ const {
   OTLPMetricExporter,
 } = require('@opentelemetry/exporter-metrics-otlp-proto');
 const { PeriodicExportingMetricReader } = require('@opentelemetry/sdk-metrics');
+const { IORedisInstrumentation } = require('@opentelemetry/instrumentation-ioredis');
 
 const sdk = new opentelemetry.NodeSDK({
   traceExporter: new OTLPTraceExporter({
@@ -24,6 +25,15 @@ const sdk = new opentelemetry.NodeSDK({
       concurrencyLimit: 1, // an optional limit on pending requests
     }),
   }),
-  instrumentations: [getNodeAutoInstrumentations()],
+  instrumentations: [
+    getNodeAutoInstrumentations(),
+    new IORedisInstrumentation({
+      responseHook: (span, response) => {
+        span.updateName(`Redis ${span.name}`);
+        span.setAttribute('db.system', 'redis');
+        span.setAttribute('db.operation', span.name);
+      },
+    }),
+  ],
 });
 sdk.start();

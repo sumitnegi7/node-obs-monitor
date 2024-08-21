@@ -61,3 +61,14 @@ This application is equipped with a comprehensive monitoring and observability s
 - **🌐 Environment Variables**: The OpenTelemetry setup can be further customized using environment variables to specify custom endpoints, headers, or other configuration parameters.
 
 This setup provides a powerful observability framework, allowing you to monitor, trace, and debug your application effectively.
+
+
+## Resources
+
+https://codersociety.com/blog/articles/nodejs-application-monitoring-with-prometheus-and-grafana
+
+https://opentelemetry.io/docs/languages/js/getting-started/nodejs/
+
+https://www.checklyhq.com/docs/traces-open-telemetry/instrumenting-code/nodejs/
+
+https://grafana.com/blog/2022/07/07/how-to-configure-grafana-loki-with-a-node.js-e-commerce-app/
